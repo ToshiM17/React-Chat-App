@@ -1,16 +1,97 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap')
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap')
 body
-    background: #efe8df
     font-family: 'Poppins',sans-serif
     $mainColor: #62b35f
     $secondColor: #2e7a2b
+    $background: #efe8df
+    background: $background
     margin: 0
     padding: 0
     display: flex
     justify-content: center
     align-items: center
     min-height: 100vh
+    .nav
+        background: $secondColor
+        font-family: "Oswald", sans-serif
+        width: calc(100% - 40px)
+        color: #fff
+        font-size: 30px
+        font-weight: 600
+        height: 30px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 20px
+        .link
+            cursor: pointer
+            background: none
+            color: #fff
+            font-size: 35px
+            text-decoration: none
+            transition: 0.3s
+            &:hover
+                scale: 1.1
+    .settings
+        width: 100vw
+        height: 100vh
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin: auto
+        text-align: center
+        gap: 20px
+        h1
+            font-size: 40px
+            font-weight: 700
+            color: $mainColor
+            padding: 0
+            margin: 0
+        .info
+            display: flex
+            align-items: center
+            justify-content: center
+            color: #fff
+            background: $mainColor
+            padding: 0px 10px
+            border-radius: 25px
+            gap: 10px
+            width: 300px
+            .iconInfo
+                width: 40px
+                height: 40px
+                color: #fff
+                border-radius: 50%
+        form
+            display: flex
+            flex-direction: column
+            align-items: center
+            gap: 20px
+            input
+                width: 280px
+                height: 40px
+                padding: 0 20px
+                border-radius: 25px
+                border: none
+                font-size: 20px
+                outline: none
+        button
+            width: 100px
+            height: 40px
+            border-radius: 25px
+            border: none
+            background: $mainColor
+            color: #fff
+            font-size: 20px
+            cursor: pointer
+            transition: 0.3s
+            &:hover
+                background: $secondColor
+            &.logOut
+                background: #e35757
+                &:hover
+                    background: #dd0000
     .App
         background: #efe8df
         color: #101720
@@ -18,33 +99,6 @@ body
         flex-direction: column
         width: 100vw
         height: 100vh
-        .nav
-            background: $secondColor
-            font-family: "Oswald", sans-serif
-            width: calc(100% - 40px)
-            color: #fff
-            font-size: 30px
-            font-weight: 600
-            height: 30px
-            display: flex
-            align-items: center
-            justify-content: space-between
-            padding: 20px
-            .logOut
-                cursor: pointer
-                display: flex
-                align-items: center
-                justify-content: center
-                border: 1px solid #fff
-                background: none
-                color: #fff
-                font-size: 15px
-                border-radius: 25px
-                padding: 10px
-                transition: 0.3s
-                &:hover
-                    background: #fff
-                    color: black
         main
             display: flex
             flex-direction: column

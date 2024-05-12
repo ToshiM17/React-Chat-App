@@ -4,13 +4,13 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "apiKey",
-  authDomain: "authDomain",
-  projectId: "projectId",
-  storageBucket: "storageBucket",
-  messagingSenderId: "messagingSenderId",
-  appId: "appId",
-  measurementId: "measurementId"
+  apiKey: "AIzaSyAHWKafXWgIO4oRffWF-wcnChVT1Pvor-4",
+  authDomain: "chat-app-701b7.firebaseapp.com",
+  projectId: "chat-app-701b7",
+  storageBucket: "chat-app-701b7.appspot.com",
+  messagingSenderId: "449498018253",
+  appId: "1:449498018253:web:3b04533ac0595946211484",
+  measurementId: "G-Y8WES7CDE3"
 };
 
 
