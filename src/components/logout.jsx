@@ -1,14 +1,15 @@
 import React from 'react'
 import { auth } from '../firebase.js'
+import { Link } from 'react-router-dom'
 
 const LogOut = () => {
     const signOut = () => {
       auth.signOut()
     }
   return (
-    <button onClick={signOut} className='logOut'>
+    <Link to="/" onClick={signOut} className='logOut'>
         Logout
-    </button>
+    </Link>
   )
 }
 

@@ -4,6 +4,8 @@ body
     font-family: 'Poppins',sans-serif
     $mainColor: #62b35f
     $secondColor: #2e7a2b
+    $redColor: #e35757
+    $redColorHover: #dd0000
     $background: #efe8df
     background: $background
     margin: 0
@@ -12,6 +14,26 @@ body
     justify-content: center
     align-items: center
     min-height: 100vh
+    .SignInMessage
+        display: flex
+        flex-direction: column
+        height: min-content
+        max-width: 65%
+        padding: 0 10px
+        margin: 0
+        color: #101720
+        .name
+            margin-top: 10px
+            margin-bottom: 5px
+            height: min-content
+        .text
+            height: min-content
+            width: fit-content
+            margin-top: 0
+            margin-bottom: 10px
+            padding: 10px 15px
+            background: #fff
+            border-radius: 0 25px 25px 25px
     .nav
         background: $secondColor
         font-family: "Oswald", sans-serif
@@ -33,6 +55,32 @@ body
             transition: 0.3s
             &:hover
                 scale: 1.1
+    .popUpBox
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 100vh
+        width: 100vw
+        position: fixed
+        top: 0
+        left: 0
+        background-color: rgba(0, 0, 0, 0.5)
+        .popUpInfo
+            background: #fff
+            width: 300px
+            height: 100px
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            border-radius: 25px
+            padding: 20px
+            gap: 20px
+            font-weight: 600
+            p
+                font-size: 20px
+                color: #101720
+                margin: 0
     .settings
         width: 100vw
         height: 100vh
@@ -62,7 +110,14 @@ body
                 width: 40px
                 height: 40px
                 color: #fff
-                border-radius: 50%
+            .infoText
+                display: flex
+                width: 70%
+                color: #fff
+                padding: 20px
+                gap: 10px
+                a
+                    color: #fff
         form
             display: flex
             flex-direction: column
@@ -76,22 +131,39 @@ body
                 border: none
                 font-size: 20px
                 outline: none
-        button
-            width: 100px
-            height: 40px
-            border-radius: 25px
-            border: none
-            background: $mainColor
-            color: #fff
-            font-size: 20px
-            cursor: pointer
-            transition: 0.3s
+        .author
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            gap: 10px
+            width: 300px
+            h2
+                font-size: 35px
+                font-weight: 700
+                color: $mainColor
+                padding: 0
+                margin: 0
+    button, .logOut
+        width: 100px
+        height: 40px
+        display: flex
+        align-items: center
+        justify-content: center
+        border-radius: 25px
+        border: none
+        text-decoration: none
+        background: $mainColor
+        color: #fff
+        font-size: 20px
+        cursor: pointer
+        transition: 0.3s
+        &:hover
+            background: $secondColor
+        &.logOut
+            background: $redColor
             &:hover
-                background: $secondColor
-            &.logOut
-                background: #e35757
-                &:hover
-                    background: #dd0000
+                background: $redColorHover
     .App
         background: #efe8df
         color: #101720
@@ -159,7 +231,7 @@ body
                 border: none
                 font-size: 20px
                 outline: none
-            button
+            button[type="submit"]
                 width: 40px
                 height: 40px
                 border-radius: 50%
